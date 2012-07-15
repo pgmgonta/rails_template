@@ -6,7 +6,8 @@ git :init
 
 append_file '.gitignore', <<-END
 .swap
-vendor/bundle
+/vendor/bundle
+/bin
 END
 
 gem 'i18n_generators', :group => :development
@@ -24,12 +25,14 @@ if twitter_bootstrap
   gem 'twitter-bootstrap-rails', :group => [:development]
 end
 
+#--binstubs option 
+#One time, run chmod +x $rvm_path/hooks/after_cd_bundler
 run 'bundle install --path vendor/bundle --without production --binstubs'
 
 if testing 
   generate("rspec:install")
-  create_file '.rspec', <<-END
---format specdoc
+  append_file '.rspec', <<-END
+--format documentation
   END
 end
 
