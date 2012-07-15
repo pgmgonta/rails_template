@@ -15,8 +15,8 @@ gem 'therubyracer'
 testing =  yes?('Do you want testing gems?')
 if testing 
   gem 'rspec-rails', :group => [:development, :test]
-	gem 'cucumber-rails', :group => [:development, :test]
-	gem 'webrat', :group => [:development, :test]
+  gem 'cucumber-rails', :group => [:development, :test]
+  gem 'webrat', :group => [:development, :test]
 end
 
 twitter_bootstrap =  yes?('Do you want twitter-bootstrap?')
@@ -27,12 +27,12 @@ end
 run 'bundle install --path vendor/bundle --without production --binstubs'
 
 if testing 
-	generate("rspec:install")
-	create_file '.rspec', <<-END
+  generate("rspec:install")
+  create_file '.rspec', <<-END
 --format specdoc
   END
 end
 
 if twitter_bootstrap
-	generate("bootstrap:install")
+  generate("bootstrap:install")
 end
