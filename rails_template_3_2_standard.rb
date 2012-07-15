@@ -18,6 +18,7 @@ if testing
   gem 'rspec-rails', :group => [:development, :test]
   gem 'cucumber-rails', :group => [:development, :test]
   gem 'webrat', :group => [:development, :test]
+	gem 'database_cleaner', :group => [:development, :test]
 end
 
 twitter_bootstrap =  yes?('Do you want twitter-bootstrap?')
