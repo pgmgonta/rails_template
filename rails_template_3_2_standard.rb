@@ -18,11 +18,11 @@ if testing
   gem 'rspec-rails', :group => [:development, :test]
   gem 'cucumber-rails', :group => [:test], :require => false
   gem 'capybara', :group => [:development, :test]
-	gem 'database_cleaner', :group => [:development, :test]
-	gem 'guard-spork', :group => [:development, :test]
-	gem 'guard-rails', :group => [:development, :test]
-	gem 'guard-cucumber', :group => [:development, :test]
-	gem 'guard-rspec', :group => [:development, :test]
+  gem 'database_cleaner', :group => [:development, :test]
+  gem 'guard-spork', :group => [:development, :test]
+  gem 'guard-rails', :group => [:development, :test]
+  gem 'guard-cucumber', :group => [:development, :test]
+  gem 'guard-rspec', :group => [:development, :test]
 end
 
 twitter_bootstrap =  yes?('Do you want twitter-bootstrap?')
