@@ -13,7 +13,12 @@ END
 gem 'i18n_generators', :group => :development
 gem 'therubyracer'
 
-testing =  yes?('Do you want testing gems?')
+if yes?('Do you want pry?')
+  gem 'pry-rails', :group => [:development, :test]
+  gem 'pry-doc', :group => [:development, :test]
+end
+
+testing =  yes?('Do you want testing?')
 if testing 
   gem 'rspec-rails', :group => [:development, :test]
   gem 'cucumber-rails', :group => [:test], :require => false
